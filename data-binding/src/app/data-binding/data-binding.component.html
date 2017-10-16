@@ -1,3 +1,4 @@
+<!--
 <section class="property-binding">
 
   <article>
@@ -14,4 +15,84 @@
     <img [src]=urlImagen>
   </article>
 
+  <article>
+    <h3>Class e Style binding</h3>
+
+    <div>
+      Selecione um opção:
+      <select #classe (change)="0">
+        <option value="alert-primary">primary</option>
+        <option value="alert-secondary">secondary</option>
+        <option value="alert-success">success</option>
+        <option value="alert-danger">danger</option>
+      </select>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="alert {{ classe.value}}" role="alert">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reiciendis odit excepturi, iure temporibus numquam voluptas
+      porro quaerat, nesciunt ab asperiores adipisci eius debitis laboriosam molestiae minus nemo quas amet!</div>
+
+    <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">...</div>
+    <div class="alert" role="alert" [class.alert-secondary]="classe.value == 'alert-secondary'">...</div>
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">...</div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">...</div>
+  </article>
+
+</section>
+-->
+<!--
+<section class="event-binding">
+
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" class="btn btn-primary">Me clique me!</button>
+
+      <br>
+      <br>
+
+      <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvaValor($event.target.value)" (blur)="salvaValor(inputValue.value)"
+        #inputValue>
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br>
+      <br>
+
+      <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">Passe o mouse sobre mim!</span>
+    </div>
+  </article>
+</section>
+-->
+<!--
+<section>
+
+  <article>
+    <h3>Two-way-binding</h3>
+    <div>
+      <input type="text"
+      [value]="nome"
+      (input)="nome = $event.target.value">
+
+      <input type="text"
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event">
+
+      <input type="text"
+      [(ngModel)]="nome">
+
+      <p>Você digitou: {{ nome }}</p>
+    </div>
+  </article>
+
+</section>
+-->
+<section>
+
+  <article>
+    <h3>Input/Output property</h3>
+    <app-input-property [nome]="nomeCurso"></app-input-property>
+  </article>
 </section>
