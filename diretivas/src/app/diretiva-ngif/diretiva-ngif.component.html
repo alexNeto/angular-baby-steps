@@ -1,0 +1,29 @@
+<h5>*ngIf</h5>
+
+<div *ngIf="cursos.length > 0; else cursosDf">
+  Lista de cursos aqui.
+</div>
+<ng-template #cursosDf>
+  eu sou o else
+</ng-template>
+
+<br>
+
+<div *ngIf="mostrarCursos; else naoMostrar">
+  Lista de cursos aqui.
+</div>
+
+<ng-template #naoMostrar>
+  Não existem cursos para serem listados
+  <br>
+</ng-template>
+
+<br>
+
+<button (click)="mostrarEsconderCursos()">Mostrar ou esconder</button>
+
+
+<h5>hidden como alternativa</h5>
+
+<div [hidden]="!mostrarCursos">mostrar cursos</div>
+<div [hidden]="mostrarCursos">não mostrar cursos</div>

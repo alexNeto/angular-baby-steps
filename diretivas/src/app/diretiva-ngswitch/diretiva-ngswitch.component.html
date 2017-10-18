@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <div class="nav navbar-nav">
+    <a class="nav-item nav-link" href="#" [class.active]="aba == 'home'"(click)="aba = 'home'">Home</a>
+    <a class="nav-item nav-link" href="#" [class.active]="aba == 'map'" (click)="aba = 'map'">Map</a>
+    <a class="nav-item nav-link" href="#" [class.active]="aba == 'list'"(click)="aba = 'list'">List</a>
+  </div>
+</nav>
+
+
+<div class="container" [ngSwitch]="aba">
+<p *ngSwitchCase="'map'">estamos em map</p>
+<p *ngSwitchCase="'list'">estamos em list</p>
+<p *ngSwitchDefault>estamos em home</p>
+</div>
