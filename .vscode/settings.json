@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.env.linux": {
+    "PATH": "/home/grad/.platformio/penv/bin:/home/grad/bin:/home/grad/.sdkman/candidates/kotlin/current/bin:/home/grad/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/grad/.composer/vendor/bin:/home/grad/.local/bin:/home/grad/bin:/home/grad/AndroidSDK:/home/grad/AndroidSDK/tools:/home/grad/AndroidSDK/platform-tools:/home/grad/.local/bin:/home/grad/bin:/home/grad/AndroidSDK:/home/grad/AndroidSDK/tools:/home/grad/AndroidSDK/platform-tools"
+  }
+}
