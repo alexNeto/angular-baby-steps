@@ -1,0 +1,16 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "angular-reddit/package.json",
+        "data-binding/package.json",
+        "diretivas/package.json",
+        "forms/package.json",
+        "hello-world/package.json",
+        "inventory-app/package.json",
+        "primeiro-projeto/package.json",
+        "servicos/package.json"
+      ]
+    }
+  }
+}
